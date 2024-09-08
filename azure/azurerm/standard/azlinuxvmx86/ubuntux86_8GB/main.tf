@@ -28,8 +28,8 @@ module "azlinuxvm" {
   #resource_group_prefix = "example" #Optional
   custom_user_data_path = "${path.root}/userdata.config/userdata_default_x86_docker.tmpl"
   resource_group_location = var.az_default_region
-  vm_size = "Standard_D2s_v3"
-  vm_spot_bid_max_price  = "0.02"
+  vm_size = "Standard_D8as_v5"
+  vm_spot_bid_max_price  = "0.038"
   vm_source_image = "${data.azurerm_platform_image.example.id}"
   image_reference = module.os_images.image_reference
   vm_admin_username = "adminuser"
