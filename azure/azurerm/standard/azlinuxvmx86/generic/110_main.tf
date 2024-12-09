@@ -40,7 +40,7 @@ resource "azurerm_public_ip" "this" {
   location            = local.use_existing_resource_group ? data.azurerm_resource_group.existing[0].location : azurerm_resource_group.this[0].location
   #location            = local.use_existing_resource_group ? data.azurerm_resource_group.existing.location : azurerm_resource_group.this.location
   resource_group_name = local.resource_group_name
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
 }
 
 resource "azurerm_network_interface" "this" {
